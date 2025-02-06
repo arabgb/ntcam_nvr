@@ -15,6 +15,7 @@ find_package(SQLite3 REQUIRED)
 
 #  adding my subdirectory and its include path
 add_subdirectory(${PROJECT_SOURCE_DIR}/database)
+include_directories(${PROJECT_SOURCE_DIR}/database)
 
 add_executable(ntcam_nvr ${PROJECT_SOURCE_DIR}/main.cpp)
 

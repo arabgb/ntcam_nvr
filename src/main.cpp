@@ -3,10 +3,10 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/imgproc.hpp>
 #include "opencv2/opencv.hpp"
-#include "database.h"
+#include "database.hpp"
 
 int main() {
-	cv::Mat img_nz = cv::imread("/Users/nabohamad/Pictures/NZ.png", cv::IMREAD_COLOR_BGR);
+	cv::Mat img_nz = cv::imread("/Users/nabohamad/Pictures/NZ.png", cv::IMREAD_COLOR);
 	if (!img_nz.empty()) {
 		cv::imshow("Picture Show", img_nz);
 		cv::waitKey(0);
