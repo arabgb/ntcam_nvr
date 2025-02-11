@@ -35,8 +35,6 @@ bool Database::execute(const std::string &sql) {
   char *errMsg = nullptr;
   if (sqlite3_exec(db, sql.c_str(), nullptr, nullptr, &errMsg) != SQLITE_OK) {
     std::cerr << "SQL error: " << errMsg << std::endl;
-    sqlite3_free(errMsg);
-    return false;
   }
   return true;
 }

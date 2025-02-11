@@ -9,9 +9,10 @@ class Database {
 		Database(const std::string& db_name);
 		~Database();
 	private:
-		sqlite3 *db;
 		void CreateTables();
 		bool execute(const std::string& sql);
+	protected:
+		sqlite3 *db;
 };
 
 #endif
