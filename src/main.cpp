@@ -7,5 +7,5 @@ int main() {
 	// sqlite3 *db = database.getDatabase();
 	CameraModel model(database.getDatabase());
 	auto cameras = model.getCameras();
-	std::cout << cameras[0].user;
+	// std::cout << cameras[0].user;
 }
