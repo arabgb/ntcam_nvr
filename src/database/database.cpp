@@ -17,8 +17,13 @@ Database::Database(const std::string &db_name) : db(nullptr) {
 
 Database::~Database() {
   if (db) {
+    std::cout << "Closing database ....." << std::endl;
     sqlite3_close(db);
   }
+}
+
+sqlite3 *Database::getDatabase() const {
+  return db;
 }
 
 void Database::CreateTables() {

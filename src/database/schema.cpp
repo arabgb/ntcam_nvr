@@ -1,7 +1,7 @@
 #include "schema.hpp"
 #include <string>
 
-std::string Schema::getCamerasTable() {
+std::string Schema:: getSettingsTable() {
   // return raw string stream (require c++11 and later)
   return R"(
 	CREATE TABLE IF NOT EXISTS settings (
@@ -10,7 +10,7 @@ std::string Schema::getCamerasTable() {
         NVR_PORT integer DEFAULT 4838 NOT NULL );
   )";
 }
-std::string Schema::getSettingsTable() {
+std::string Schema::getCamerasTable() {
   // return raw string stream (require c++11 and later)
   return R"(
 	CREATE TABLE IF NOT EXISTS cameras (
