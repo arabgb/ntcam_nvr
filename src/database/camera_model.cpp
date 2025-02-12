@@ -6,10 +6,13 @@
 
 CameraModel::CameraModel(sqlite3 *db) : db(db) {}
 
-std::vector<CameraInterface> CameraModel::getCameras() {
+std::vector<CameraInterface> CameraModel::getCameras(int motion) {
   std::vector<CameraInterface> cameras;
   if (db) {
     std::string sql("select * from cameras");
+    if (motion != -1) {
+      sql = "select * from cameras where motion_detection=" + std::to_string(motion);
+    }
     sqlite3_stmt *stmt;
     int rc = sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, NULL);
     if (rc == SQLITE_OK) {
