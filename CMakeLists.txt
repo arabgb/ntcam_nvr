@@ -9,10 +9,10 @@ set(PROJECT_SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
 # tell cmake to generate compile_command.json, then ln it to root source 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Use it for debugging
-set(CMAKE_BUILD_TYPE Debug)
+# set(CMAKE_BUILD_TYPE Debug)
 
 
 # required packages
